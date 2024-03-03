@@ -174,13 +174,15 @@ alias r='/usr/bin/ranger'
 # 20220412
 export KDBWORKTREE="${HOME}/Dropbox/ODPRTO"
 export KDBGITDIR="${HOME}/majstaf/d_kdb/knowledgedb.git"
-export DMTSGITDIR="${HOME}/majstaf/d_metsys_git/d_metsys"
-export DMTSWORKDIR="${HOME}/majstaf/d_metsys_git/src_d_metsys"
-export DVOLGITDIR="${HOME}/majstaf/d_vol"
-export DVOLWORKDIR="${HOME}/majstaf/majvolpejpers"
 alias dkdb="/usr/bin/git --git-dir=${KDBGITDIR} --work-tree=${KDBWORKTREE}"
-alias dmts="/usr/bin/git --git-dir=${DMTSGITDIR} --work-tree=${DMTSWORKDIR}"
-alias dvol="/usr/bin/git --git-dir=${DVOLGITDIR} --work-tree=${DVOLWORKDIR}"
+
+# 20240227
+export MDBVOLGITDIR="${HOME}/majstaf/mdbgit/vlpprs_mdb"
+export MDBVOLWORKDIR="${HOME}/majstaf/majvolpejpers"
+alias dvol="/usr/bin/git --git-dir=${MDBVOLGITDIR} --work-tree=${MDBVOLWORKDIR}"
+
+
+
 alias sdu='sudo du -sh --total * | sort -hr | head'
 
 # 20221127
