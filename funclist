@@ -320,5 +320,3 @@ function git_dvol() {
 	/usr/bin/git --git-dir=${DVOLGITDIR} --work-tree=${DVOLWORKDIR} "$@"
 }
 
-# 
-
