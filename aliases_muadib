@@ -179,7 +179,7 @@ alias dkdb="/usr/bin/git --git-dir=${KDBGITDIR} --work-tree=${KDBWORKTREE}"
 # 20240227
 export MDBVOLGITDIR="${HOME}/majstaf/mdbgit/vlpprs_mdb"
 export MDBVOLWORKDIR="${HOME}/majstaf/majvolpejpers"
-alias dvol="/usr/bin/git --git-dir=${MDBVOLGITDIR} --work-tree=${MDBVOLWORKDIR}"
+alias mvol="/usr/bin/git --git-dir=${MDBVOLGITDIR} --work-tree=${MDBVOLWORKDIR}"
 
 
 
