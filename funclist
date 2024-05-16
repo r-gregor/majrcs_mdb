@@ -259,18 +259,6 @@ function wtmpp () {
 
 
 ### --------------------------------------------------------------------
-### 20180228
-
-function tmxs () {
-	# tmux -f ~/.mytmuxconf_V3 attach
-	# tmux -f ~/.mytmuxconf_V4 attach
-	tmux -f ~/.tmux_6_conf attach
-}
-
-function tmxdb () {
-	tmux -f ~/.tmxdb_1 attach
-}
-
 ### 20180302
 function 256_colors () {
 

@@ -113,9 +113,9 @@ alias wdflh='watch -d -n1 "df -h | /usr/bin/grep -v loop"'
 
 
 # added 20180216
-alias ktmx='tmux kill-server'
-alias ktmux='tmux kill-server'
-alias tmux='tmux -2'
+# alias ktmx='tmux kill-server'
+# alias ktmux='tmux kill-server'
+# alias tmux='tmux -2'
 
 # added 20180523
 alias jvcd='for FFF in $(ls -1 *java); do javac -verbose $FFF && echo -e done "$FFF\n----------------------------"; done'
