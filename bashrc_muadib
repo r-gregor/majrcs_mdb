@@ -125,4 +125,5 @@ export CODING_REMOTE=$(cat ~/.tmp/CODING_REMOTE)
 
 # 20231208
 export CDPATH=".:${HOME}:${HOME}/majstaf:${HOME}/majstaf/coding2/testing:${HOME}/Dropbox:${HOME}/majstaf/majmedia"
+export CDPATH="${CDPATH}:${HOME}/majstaf/mdbgit/knowledgedb"
 
