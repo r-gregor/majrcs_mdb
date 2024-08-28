@@ -215,3 +215,6 @@ alias uimp=' xargs -ro vim -Mp'
 alias fzvm='fzf | xargs -ro vim'
 alias fzvmr='fzf | xargs -ro vim -M'
 
+# 20240826
+alias fzvmp='fzf | xargs -ro vim p'
+
