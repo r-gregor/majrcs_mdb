@@ -219,3 +219,6 @@ alias fzvmr='fzf | xargs -ro vim -M'
 # -m flag to multiple selection with tab/shift tab
 alias fzvmp='fzf -m | xargs -ro vim -p'
 
+# 20241007
+alias run='ls ~/majstaf/majbin/ | fzf | bash - '
+
