@@ -20,5 +20,5 @@ parse_git_branch() {
 # export PS1='$(printf "%s")\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\n$(parse_git_branch) \[\033[00m\]\$> '
 # 20240214
 # check: unicode_symbols_for_promt_20240214.txt and prompts_20240214.txt in ~/majstaf/metsys_muadib
-export PS1=$'\n\[\e[01;38;5;75m\][\h] \w\n$(parse_git_branch)\[\e[1;31m\]\u21AA \[\e[0m\] '
+export PS1=$'\n\[\e[01;38;5;75m\][\u@\h] \w\n$(parse_git_branch)\[\e[1;31m\]\u21AA \[\e[0m\] '
 
