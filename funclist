@@ -316,3 +316,6 @@ function logout() {
 		sudo loginctl terminate-user ${USER}
 }
 
+sbrb() {
+	alacritty -e bash --init-file ~/.bashrc_base 2>/dev/null &
+}
