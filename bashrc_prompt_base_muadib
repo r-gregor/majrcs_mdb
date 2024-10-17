@@ -1,5 +1,5 @@
 # PROMPT- PS1 setup
-export PROMPT_DIRTRIM=0
+# export PROMPT_DIRTRIM=0
 
 ### changed 20160510
 # export PS1='$(printf "\n%s\n")\$> \u@\h [${PWD}] \n\$> '
