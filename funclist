@@ -316,6 +316,12 @@ function logout() {
 		sudo loginctl terminate-user ${USER}
 }
 
-sbrb() {
-	alacritty -e bash --init-file ~/.bashrc_base 2>/dev/null &
+# 20241015
+ function sbrn() {
+	nohup alacritty -e bash --init-file ~/.bashrc_nerd >/dev/null 2>&1 &
 }
+
+function sbrb() {
+	nohup alacritty -e bash --init-file ~/.bashrc_base >/dev/null 2>&1 &
+}
+
