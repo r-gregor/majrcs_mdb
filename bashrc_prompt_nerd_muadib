@@ -36,10 +36,10 @@ prompt_left() {
 	red_inv='\e[07;91m'
 	blue_red='\e[00;38;5;111;101m'
 
-	green_bg='\e[00;48;5;47m'
-	green='\e[00;38;5;47m'
-	green_inv='\e[07;38;5;47m'
-	blue_green='\e[00;38;5;111;48;5;47m'
+	green_bg='\e[00;48;5;42m'
+	green='\e[00;38;5;42m'
+	green_inv='\e[07;38;5;42m'
+	blue_green='\e[00;38;5;111;48;5;42m'
 
 #	if [ -d ./.git ] || [ -d ./hooks ]; then
 #		git_info=" git: $(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' -e 's/$/ /')"
