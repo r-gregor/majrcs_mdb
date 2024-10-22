@@ -223,3 +223,5 @@ alias fzvmp='fzf -m | xargs -ro vim -p'
 # 20241007
 alias run='ls ~/majstaf/majbin/ | fzf | bash - '
 
+alias gst='/usr/bin/git status'
+
