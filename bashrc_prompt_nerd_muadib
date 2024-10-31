@@ -1,5 +1,5 @@
 # PROMPT- PS1 setup
-export PROMPT_DIRTRIM=0
+export PROMPT_DIRTRIM=3
 
 # 20241014
 date_stamp() {
