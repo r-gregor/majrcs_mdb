@@ -61,7 +61,7 @@ alias ydl="${ydl_cmd} -o '%(title)s_%(upload_date)s.%(ext)s'"
 alias ydla='${ydl_cmd} -x --audio-format mp3 '
 
 ### added 20130926 ----------------------------------------------
-alias fm='thunar'
+alias fm='thunar &'
 alias pm='pcmanfm'
 # alias opn='pcmanfm'
 alias opn='mousepad & 2>/dev/null'
