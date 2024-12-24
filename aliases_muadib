@@ -225,3 +225,6 @@ alias run='ls ~/majstaf/majbin/ | fzf | bash - '
 
 alias gst='/usr/bin/git status'
 
+
+alias fm='/usr/bin/thunar &'
+
