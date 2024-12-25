@@ -33,30 +33,11 @@ export djtt=$(date +%Y%m%d-%H%M%S)
 # ==================
 # backspace = delete
 # ==================
-
 if tty --quiet; then
-stty erase '^?'
+	stty erase '^?'
 fi
 
 
-# set IFS to newline '\n'
-nifs() {
-	echo -n "setting IFS to newline ..."
-	IFS=$'\n'
-	echo " done."
-	}
-
-# set IFS to orginal ' \t\n'
-oifs() {
-	echo -n "setting IFS to original value ..."
-	IFS=$' \t\n'
-	echo " done."
-	}
-
-# show IFS value
-showifs() {
-	printf %q "$IFS"
-}
 
 export RUT='${HOME}/majstaf/RUT'
 export JPATH="${HOME}/majstaf/coding/JAVA_d"
