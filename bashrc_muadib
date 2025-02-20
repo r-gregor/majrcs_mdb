@@ -66,3 +66,14 @@ export CODING_REMOTE=$(cat ~/.tmp/CODING_REMOTE)
 export CDPATH=".:${HOME}:${HOME}/majstaf:${HOME}/majstaf/coding2/testing:${HOME}/Dropbox:${HOME}/majstaf/majmedia"
 export CDPATH="${CDPATH}:${HOME}/majstaf/mdbgit/knowledgedb"
 
+# new exports 20250220
+export MMJSTF=~/majstaf
+export BRISI=${MMJSTF}/BRISI
+export DANES=${MMJSTF}/_NERAZPOREJENO/__DANES__
+export MGT=${MMJSTF}/mdbgit
+export MKNOWLEDGEBASE=${MGT}/knowledgedb
+export MDTFJLS=${MGT}/dotfiles_mdb
+export MMTS=${MGT}/metsys_mdb
+export MMRCS=${MGT}/majrcs_mdb
+export MPRNS=${MGT}/prenos
+
