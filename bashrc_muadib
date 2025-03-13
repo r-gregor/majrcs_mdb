@@ -63,8 +63,8 @@ export CODING_LOCAL=$(cat ~/.tmp/CODING_LOCAL)
 export CODING_REMOTE=$(cat ~/.tmp/CODING_REMOTE)
 
 # 20231208
-export CDPATH=".:${HOME}:${HOME}/majstaf:${HOME}/majstaf/coding2/testing:${HOME}/Dropbox:${HOME}/majstaf/majmedia"
-export CDPATH="${CDPATH}:${HOME}/majstaf/mdbgit/knowledgedb"
+# export CDPATH=".:${HOME}:${HOME}/majstaf:${HOME}/majstaf/coding2/testing:${HOME}/Dropbox:${HOME}/majstaf/majmedia"
+# export CDPATH="${CDPATH}:${HOME}/majstaf/mdbgit/knowledgedb"
 
 # new exports 20250220
 export MJSTF="${HOME}/majstaf"
@@ -88,7 +88,13 @@ export RTST="${MTST}/rust_testing"
 export NTST="${MTST}/ncurses_testing"
 export ZTST="${MTST}/zig_testing"
 
+export MJMDJ="${MJSTF}/majmedia"
+export SVM="${MJMDJ}/Seivom"
+export MVS="${MJMDJ}/Movies"
 
+export MRCS="${MJSTF}/majrcs"
+export SZNM="${MJSTF}/seznami"
+export MTSS="${MJSTF}metsys"
 
-
+# ---
 
