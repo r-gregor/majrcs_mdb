@@ -183,8 +183,8 @@ alias gst='/usr/bin/git status'
 ###################
 ### fzf aliases ###
 ###################
-alias fzvm='fzf --reverse | xargs -ro vim'
-alias fzvmr='fzf --reverse | xargs -ro vim -M'
-alias fzvmp='fzf -m --reverse | xargs -ro vim -p'
+alias fvm='fzf --reverse | xargs -ro vim'
+alias fvmr='fzf --reverse | xargs -ro vim -M'
+alias fvmp='fzf -m --reverse | xargs -ro vim -p'
 alias run='ls ~/majstaf/majbin/ | fzf --reverse | bash - '
 
