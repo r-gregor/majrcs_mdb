@@ -343,5 +343,5 @@ oifs() {
 }
 
 ncd() {
-	 cd "$(find "$@" -type d \( -name ".git" -o -name ".cache" \) -prune -o -name "*" 2>/dev/null |fzf -e)"
+	 cd "$(find "$@" -type d \( -name ".git" -o -name ".cache" \) -prune -o -name "*" 2>/dev/null |fzf -e --reverse)"
 }
