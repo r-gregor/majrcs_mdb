@@ -47,6 +47,7 @@ alias wdfl='watch -d -n1 "df | /usr/bin/grep -v loop"'
 alias wdflh='watch -d -n1 "df -h | /usr/bin/grep -v loop"'
 # alias cp='/usr/bin/cp -v'
 alias cp='cp -nv'
+alias cpi='cp -i'
 alias mv='/usr/bin/mv -v'
 alias rm='/usr/bin/rm -v'
 alias sbr='source ~/.bashrc'
@@ -72,7 +73,7 @@ alias clmn='cat -n | column -c "$(tput cols)"'
 alias ctn='cat -n'
 alias ccat='highlight -O ansi'
 alias r='/usr/bin/ranger'
-
+alias prs='prompt_switch'
 
 ###########################
 ### yt-dlp / youtube-dl ###
