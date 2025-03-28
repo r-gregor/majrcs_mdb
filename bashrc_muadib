@@ -89,10 +89,11 @@ export RTST="${MTST}/rust_testing"
 export NTST="${MTST}/ncurses_testing"
 export ZTST="${MTST}/zig_testing"
 
-export MJMDJ="${MJSTF}/majmedia"
+export MJMD="${MJSTF}/majmedia"
 export SVM="${MJMDJ}/Seivom"
 export MVS="${MJMDJ}/Movies"
 
+export MJBN="${MJSTF}/majbin"
 export MRCS="${MJSTF}/majrcs"
 export SZNM="${MJSTF}/seznami"
 export MTSS="${MJSTF}metsys"
