@@ -78,10 +78,10 @@ alias prs='prompt-switch'
 ###########################
 ### yt-dlp / youtube-dl ###
 ###########################
-ydl-cmd=/home/rgregor/.local/bin/yt-dlp
-alias ydlF='${ydl-cmd} -F '
-alias ydl="${ydl-cmd} -o '%(title)s_%(upload_date)s.%(ext)s'"
-alias ydla='${ydl-cmd} -x --audio-format mp3 '
+ydl_cmd='/home/rgregor/.local/bin/yt-dlp'
+alias ydlF='${ydl_cmd} -F '
+alias ydl="${ydl_cmd} -o '%(title)s_%(upload_date)s.%(ext)s'"
+alias ydla='${ydl_cmd} -x --audio-format mp3 '
 
 
 #########################
