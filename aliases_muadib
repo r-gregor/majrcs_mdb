@@ -73,15 +73,15 @@ alias clmn='cat -n | column -c "$(tput cols)"'
 alias ctn='cat -n'
 alias ccat='highlight -O ansi'
 alias r='/usr/bin/ranger'
-alias prs='prompt_switch'
+alias prs='prompt-switch'
 
 ###########################
 ### yt-dlp / youtube-dl ###
 ###########################
-ydl_cmd=/home/rgregor/.local/bin/yt-dlp
-alias ydlF='${ydl_cmd} -F '
-alias ydl="${ydl_cmd} -o '%(title)s_%(upload_date)s.%(ext)s'"
-alias ydla='${ydl_cmd} -x --audio-format mp3 '
+ydl-cmd=/home/rgregor/.local/bin/yt-dlp
+alias ydlF='${ydl-cmd} -F '
+alias ydl="${ydl-cmd} -o '%(title)s_%(upload_date)s.%(ext)s'"
+alias ydla='${ydl-cmd} -x --audio-format mp3 '
 
 
 #########################
@@ -98,12 +98,12 @@ alias showifs='printf %q "$IFS"'     # SHOW IFS
 alias sau='sudo apt update'
 alias sag='sudo apt upgrade'
 alias sad='sudo apt-get dist-upgrade'
-alias w_s='watch -n1 sensors'
+alias w-s='watch -n1 sensors'
 alias umount='umount -v'
-alias un-mount_dev_sdds='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdd*'
-alias un-mount_dev_sdcs='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdc*'
-alias un-mount_dev_sdbs='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdb*'
-alias un-mount_dev_sdas='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sda*'
+alias un-mount-dev-sdds='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdd*'
+alias un-mount-dev-sdcs='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdc*'
+alias un-mount-dev-sdbs='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sdb*'
+alias un-mount-dev-sdas='echo "syncing ..." && sudo sync && echo "UN-mounting ..." && sudo umount -v /dev/sda*'
 alias rb='sudo reboot'
 alias pwf='systemctl poweroff -i'
 alias rbt='systemctl reboot -i'
@@ -173,9 +173,6 @@ alias bat='/usr/bin/batcat'
 ####################
 ### git commands ###
 ####################
-export KDBWORKTREE="${HOME}/Dropbox/ODPRTO"
-export KDBGITDIR="${HOME}/majstaf/d_kdb/knowledgedb.git"
-alias dkdb="/usr/bin/git --git-dir=${KDBGITDIR} --work-tree=${KDBWORKTREE}"
 export MDBVOLGITDIR="${HOME}/majstaf/mdbgit/vlpprs_mdb"
 export MDBVOLWORKDIR="${HOME}/majstaf/majvolpejpers"
 alias mvol="/usr/bin/git --git-dir=${MDBVOLGITDIR} --work-tree=${MDBVOLWORKDIR}"
