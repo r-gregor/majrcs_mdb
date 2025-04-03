@@ -286,7 +286,7 @@ sbrb() {
 }
 
 
-prompt_switch() {
+prompt-switch() {
 			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
 			choice=$(echo -e "${prompts}\n${quit}" | fzf --reverse)
@@ -297,8 +297,7 @@ prompt_switch() {
 			fi
 }
 
-
-switch_prompt_dmn() {
+switch-prompt-dmn() {
 			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
 			choice=$(echo -e "${prompts}\n${quit}" | dmenu -l 5 -p "choose prompt:")
@@ -309,7 +308,7 @@ switch_prompt_dmn() {
 			fi
 }
 
-switch_prompt_rofi() {
+switch-prompt-rofi() {
 			prompts=$(for FFF in ~/majstaf/majrcs/bashrc_prompt_*; do echo $(basename $FFF); done;)
 			quit=$(echo "quit")
 			choice=$(echo -e "${prompts}\n${quit}" | rofi -dmenu -no-fixed-num-lines)
@@ -321,11 +320,11 @@ switch_prompt_rofi() {
 }
 
 swpd() {
-	switch_prompt_dmn
+	switch-prompt-dmn
 }
 
 swpr() {
-	switch_prompt_rofi
+	switch-prompt-rofi
 }
 
 
