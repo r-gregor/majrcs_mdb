@@ -7,13 +7,13 @@ dcm:		doublecmd &
 sag:		sudo apt-get upgrade
 sau:		sudo apt-get update
 sbr:		source ~/.bashrc
-w_s:		watch -n1 sensors
+w-s:		watch -n1 sensors
 crlw:		curl display CLI weather -- Ljubljana
 wdf:		watch df with changes  sec interval
 ------------------------------------------------------------------------
 Functions --
-pim_[on,of]:	sshfs mount KODI:Videos to /home/rgregor/KRZ_Movies -- ON, OFF
-pit_[on,of]:	sshfs mount KODI:TV Shows to /home/rgregor/KRZ_TV-shows -- ON, OFF
+pim-[on,of]:	sshfs mount KODI:Videos to /home/rgregor/KRZ_Movies -- ON, OFF
+pit-[on,of]:	sshfs mount KODI:TV Shows to /home/rgregor/KRZ_TV-shows -- ON, OFF
 db[0,1,s]	dropbox -- STOP, START, STATUS
 cnk[s,k]:	conky -- START, STOP
 cv:		cdargs
