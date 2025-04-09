@@ -74,7 +74,7 @@ export DANES="${MJSTF}/_NERAZPOREJENO/__DANES__"
 export MGT="${MJSTF}/mdbgit"
 export KNOWLEDGEDB="${MGT}/knowledgedb"
 export MDTFJLS="${MGT}/dotfiles_mdb"
-export MMTS="${MGT}/metsys_mdb"
+export MMTSYS="${MGT}/metsys_mdb"
 export MMJBN="${MGT}/majbin_mdb"
 export MMRCS="${MGT}/majrcs_mdb"
 export MPRNS="${MGT}/prenos"
@@ -97,7 +97,7 @@ export MVS="${MJMDJ}/Movies"
 export MJBN="${MJSTF}/majbin"
 export MRCS="${MJSTF}/majrcs"
 export SZNM="${MJSTF}/seznami"
-export MTSS="${MJSTF}metsys"
+export MTSYS="${MJSTF}/metsys"
 
 # ---
 
