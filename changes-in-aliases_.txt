@@ -1,1 +1,0 @@
-alias grepc='GREP_COLOR="1;31" LANG=C grep --color=always'
