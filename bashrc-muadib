@@ -14,7 +14,7 @@ export TERM=xterm-256color # added 20231117 -- to use 256 colors in mc
 
 # PROMPT PS1
 # source ~/majstaf/majrcs/bashrc-prompt-nerd-muadib
-source ~/majstaf/majrcs/bashrc-prompt-bare-muadib
+source ~/majstaf/majrcs/bashrc-prompt-nerd-muadib
 unset TMP
 unset TEMP
 export TMP=/tmp
