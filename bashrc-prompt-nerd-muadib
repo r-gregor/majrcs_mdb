@@ -3,7 +3,7 @@ export PROMPT_DIRTRIM=3
 
 # 20241014
 date-stamp() {
-echo -e "\e[38;5;244m[$(date +"%Y-%m-%d")] [$(date +%T)]\e[0m"
+	echo -e "\e[38;5;244m[$(date +"%Y-%m-%d")] [$(date +%T)]\e[0m"
 }
 
 # 20240214
