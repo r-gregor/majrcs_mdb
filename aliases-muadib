@@ -130,7 +130,6 @@ alias sl3='screen -X source ~/.screen-lyt-03' # 2x V-split, 2x H-split
 ###################
 alias vvm='vim ~/.vimrc'
 alias vbr='vim ~/.bashrc'
-alias vimb='vim -u $HOME/.dotvimrc-monochrome'
 alias vimr='vim -M'
 alias vimm='vim -M'
 alias uim=' xargs -ro vim -p'
@@ -188,5 +187,6 @@ alias sfvmr='fzf --reverse | xargs -ro vim -M'
 alias sfevmr='fzf --reverse -e | xargs -ro vim -M'
 alias mfvm='fzf -m --reverse | xargs -ro vim -p'
 alias mfevm='fzf -m --reverse -e | xargs -ro vim -p'
-alias run='ls ~/majstaf/majbin/ | fzf --reverse | bash - '
+# alias run='ls -1d ~/majstaf/majbin/* | fzf --reverse | bash - '
+alias run='find ~/majstaf/majbin/ -type f -executable | fzf --reverse | bash - '
 
