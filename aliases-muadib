@@ -62,7 +62,7 @@ alias DBS='dropbox status'
 #######################
 alias bat-stat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 alias bttr='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
-alias hstl='gPth="$HOME/majstaf/seznami/hstl_muadib_$(date +'%Y%m%d-%H%M%S').txt"; history >> ${gPth}; echo "[INFO] latest HISTORY added to ${gPth}!"'
+alias hstl='gPth="$HOME/majstaf/seznami/hstl-muadib-$(date +'%Y%m%d-%H%M%S').txt"; history >> ${gPth}; echo "[INFO] latest HISTORY added to ${gPth}!"'
 alias fd='/usr/bin/fdfind'
 alias pf='poweroff'
 alias rb='reboot'
@@ -125,17 +125,6 @@ alias sl3='screen -X source ~/.screen-lyt-03' # 2x V-split, 2x H-split
 # alias tmux='tmux -2'
 
 
-###################
-### vim command ###
-###################
-alias vvm='vim ~/.vimrc'
-alias vbr='vim ~/.bashrc'
-alias vimr='vim -M'
-alias vimm='vim -M'
-alias uim=' xargs -ro vim -p'
-alias uimp=' xargs -ro vim -Mp'
-
-
 #######################
 ### custom commands ###
 #######################
@@ -181,12 +170,27 @@ alias gst='/usr/bin/git status'
 ###################
 ### fzf aliases ###
 ###################
-alias sfvm='fzf --reverse | xargs -ro vim'
-alias sfevm='fzf --reverse -e | xargs -ro vim'
-alias sfvmr='fzf --reverse | xargs -ro vim -M'
-alias sfevmr='fzf --reverse -e | xargs -ro vim -M'
-alias mfvm='fzf -m --reverse | xargs -ro vim -p'
-alias mfevm='fzf -m --reverse -e | xargs -ro vim -p'
-# alias run='ls -1d ~/majstaf/majbin/* | fzf --reverse | bash - '
+alias lss-fzf='less $(fzf --reverse)'
+alias vedit-sfjl-fzf='fzf --reverse | xargs -ro vim'
+alias vedit-sfjl-efzf='fzf --reverse -e | xargs -ro vim'
+alias vedit-mfjl-fzf='fzf -m --reverse | xargs -ro vim -p'
+alias vedit-mfjl-efzf='fzf -m --reverse -e | xargs -ro vim -p'
+alias vview-sfjl-fzf='fzf --reverse | xargs -ro vim -M'
+alias vview-sfjl-efzf='fzf --reverse -e | xargs -ro vim -M'
+alias vview-mfjl-fzf='fzf -m --reverse | xargs -ro vim -Mp'
+alias vview-mfjl-efzf='fzf -m --reverse -e | xargs -ro vim -Mp'
 alias run='find ~/majstaf/majbin/ -type f -executable | fzf --reverse | bash - '
+alias run-efzf='find ~/majstaf/majbin/ -type f -executable | fzf --reverse -e | bash - '
+
+###################
+### vim command ###
+###################
+alias v='vim'
+alias v-ro='vim -M'                                                         # readonly
+alias v-mfjl=' xargs -ro vim -p'                                            # open in separate tabs
+alias v-mfjl-ro=' xargs -ro vim -Mp'                                        # open in separate tabs redaonly
+alias v-sfjl-git-repo='find -type f | grep -v '.git' | fzf | xargs -ro vim' # fzf single search inside repo
+alias v-vrc='vim ~/.vimrc'
+alias v-brc='vim ~/.bashrc'
+alias vimn='vim -Nu NORC '
 
