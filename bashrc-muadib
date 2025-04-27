@@ -56,8 +56,9 @@ source /usr/share/doc/fzf/examples/completion.bash
 export PATH=$PATH:${HOME}/majstaf/majprogs/zig-linux-x87_64-0.11.0-dev.1817+f6c934677
 export PATH=$PATH:${HOME}/majstaf/majprogs/go/bin
 
-#20230523
-source ${HOME}/.SCRTS
+#20250427
+source ${HOME}/.SCRTS_yh
+source ${HOME}/.SCRTS_gg
 
 # 20230907
 export CODING_LOCAL=$(cat ~/.tmp/CODING_LOCAL)
