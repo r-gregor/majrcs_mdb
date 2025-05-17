@@ -345,6 +345,7 @@ ncd() {
 	 cd "$(find "$@" -type d \( -name ".git" -o -name ".cache" \) -prune -o -name "*" 2>/dev/null |fzf -e --reverse --height 50% --border)"
 }
 
-check-all-git-diffs() {
-	for DDD in majbin majrcs metsys; do check-git-diffs-mdb $DDD; done
-}
+# 20250517 -- moved to separate script
+# check-all-git-diffs() {
+# 	for DDD in majbin majrcs metsys; do check-git-diffs-mdb $DDD; done
+# }
