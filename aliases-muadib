@@ -29,7 +29,7 @@ alias sdu='sudo du -sh --total '*' | sort -hr | head'
 alias lst='ls --color -t'
 alias llt='ls --color -lt'
 alias llth='ls --color -lt | head -n10'
-alias ncdu='/usr/bin/ncdu --color dark'
+alias ncduc='/usr/bin/ncdu --color dark'
 
 #####################################
 ### file/dir manipulations/access ###
