@@ -356,3 +356,4 @@ ncd() {
 # check-all-git-diffs() {
 # 	for DDD in majbin majrcs metsys; do check-git-diffs-mdb $DDD; done
 # }
+
