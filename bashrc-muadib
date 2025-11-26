@@ -69,10 +69,22 @@ export CODING_REMOTE=$(cat ~/.tmp/CODING_REMOTE)
 # export CDPATH="${CDPATH}:${HOME}/majstaf/mdbgit/knowledgedb"
 
 # new exports 20251126
-export MJST="${HOME}/majstaf"
-export MGT="${MJST}/mdbgit"
-export BRISI="${MJST}/BRISI"
-export DANES="${MJST}/_NERAZPOREJENO/__DANES__"
+export MJSTF="${HOME}/majstaf"
+export MGT="${MJSTF}/mdbgit"
+export MTST="${MJSTF}/coding2/testing"
+export MJMDJ="${MJSTF}/majmedia"
+# ------------------------------------
+export BRISI="${MJSTF}/BRISI"
+export DANES="${MJSTF}/_NERAZPOREJENO/__DANES__"
+# ------------------------------------
+export MJBN="${MJSTF}/majbin"
+export MTSYS="${MJSTF}/metsys"
+export MRCS="${MJSTF}/majrcs"
+export SZNM="${MJSTF}/seznami"
+export MSCRP="${MJSTF}/majscripts-mdb"
+export MSPPT="${MJSTF}/support"
+export MCFG="${MJSTF}/majconfig"
+export MPRG="${MJSTF}/majprogs"
 # ------------------------------------
 export KNOWLEDGEDB="${MGT}/knowledgedb"
 export MGMJBN="${MGT}/majbin_mdb"
@@ -82,7 +94,6 @@ export MGSZNM="${MGT}/seznami_mdb"
 export MGPRNS="${MGT}/prenos"
 export MGDTFJLS="${MGT}/dotfiles_mdb"
 # ------------------------------------
-export MTST="${MJST}/coding2/testing"
 export CTST="${MTST}/c_testing"
 export JTST="${MTST}/java_testing"
 export GTST="${MTST}/go_testing"
@@ -91,16 +102,7 @@ export RTST="${MTST}/rust_testing"
 export NTST="${MTST}/ncurses_testing"
 export ZTST="${MTST}/zig_testing"
 # ------------------------------------
-export MJMD="${MJST}/majmedia"
 export SVM="${MJMDJ}/Seivom"
 export MVS="${MJMDJ}/Movies"
 # ------------------------------------
-export MJBN="${MJST}/majbin"
-export MTSYS="${MJST}/metsys"
-export MRCS="${MJST}/majrcs"
-export SZNM="${MJST}/seznami"
-export MSCRP="${MJST}/majscripts-mdb"
-export MSPPT="${MJST}/support"
-export MCFG="${MJST}/majconfig"
-export MPRG="${MJST}/majprogs"
 
