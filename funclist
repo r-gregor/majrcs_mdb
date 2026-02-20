@@ -319,11 +319,15 @@ prompt-switch-rofi() {
 			fi
 }
 
-psdm() {
+prs() {
+	prompt-switch
+}
+
+prsd() {
 	prompt-switch-dmn
 }
 
-psrf() {
+prsr() {
 	prompt-switch-rofi
 }
 
@@ -331,7 +335,15 @@ psb() {
 	source ~/majstaf/majrcs/bashrc-prompt-bare-muadib
 }
 
+prsb() {
+	source ~/majstaf/majrcs/bashrc-prompt-bare-muadib
+}
+
 psn() {
+	source ~/majstaf/majrcs/bashrc-prompt-nerd-muadib
+}
+
+prsn() {
 	source ~/majstaf/majrcs/bashrc-prompt-nerd-muadib
 }
 

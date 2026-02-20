@@ -84,7 +84,8 @@ prompt-next() {
 
 # 20241014
 prompt() {
-	PS1=$(printf "%*s\r%s\n%s " "$(($(tput cols) + 14))" "$(date-stamp)" "$(prompt-left)" "$(prompt-next)")
+	# PS1=$(printf "%*s\r%s\n%s " "$(($(tput cols) + 14))" "$(date-stamp)" "$(prompt-left)" "$(prompt-next)")
+	PS1=$(printf "%s\n%s\n%s " "$(date-stamp)" "$(prompt-left)" "$(prompt-next)")
 }
 
 # 20241014
