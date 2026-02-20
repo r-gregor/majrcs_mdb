@@ -73,7 +73,6 @@ alias clmn='cat -n | column -c "$(tput cols)"'
 alias ctn='cat -n'
 alias ccat='highlight -O ansi'
 alias r='/usr/bin/ranger'
-alias prs='prompt-switch'
 
 ###########################
 ### yt-dlp / youtube-dl ###
