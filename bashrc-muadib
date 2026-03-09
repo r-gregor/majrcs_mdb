@@ -1,7 +1,7 @@
 # EXPORTs
 # =======
 
-export CURRENT_YEAR_ENV=2024
+export CURRENT_YEAR_ENV=2026
 
 export LESS="-QR -x4 -Xr"
 export HISTCONTROL=erasedups
