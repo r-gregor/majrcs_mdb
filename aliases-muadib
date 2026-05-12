@@ -63,7 +63,7 @@ alias DBS='dropbox status'
 #######################
 alias bat-stat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 alias bttr='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
-alias hstl='gPth="$HOME/majstaf/seznami/hstl-muadib-$(date +'%Y%m%d-%H%M%S').txt"; history >> ${gPth}; echo "[INFO] latest HISTORY added to ${gPth}!"'
+# alias hstl='gPth="$HOME/majstaf/seznami/hstl-muadib-$(date +'%Y%m%d-%H%M%S').txt"; history >> ${gPth}; echo "[INFO] latest HISTORY added to ${gPth}!"'
 alias fd='/usr/bin/fdfind'
 alias pf='poweroff'
 alias rb='reboot'
