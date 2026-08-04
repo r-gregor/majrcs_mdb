@@ -31,6 +31,7 @@ alias sdu='sudo du -sh --total '*' | sort -hr | head'
 alias llt='ls --color -lt'
 alias llth='ls --color -lt | head -n10'
 alias ncduc='/usr/bin/ncdu --color dark'
+alias hl='rg --passthru' # highlight
 
 #####################################
 ### file/dir manipulations/access ###
