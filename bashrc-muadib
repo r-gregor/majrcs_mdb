@@ -85,6 +85,7 @@ export MSCRP="${MJSTF}/majscripts-mdb"
 export MSPPT="${MJSTF}/support"
 export MCFG="${MJSTF}/majconfig"
 export MPRG="${MJSTF}/majprogs"
+export MJDT="${MJSTF}/majdata"
 # ------------------------------------
 export KNOWLEDGEDB="${MGT}/knowledgedb"
 export MGMJBN="${MGT}/majbin_mdb"
