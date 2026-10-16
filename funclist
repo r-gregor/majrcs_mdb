@@ -408,3 +408,111 @@ vimb() {
 	fi
 }
 
+mjstf() {
+	cd $MJSTF
+}
+
+mgt() {
+	cd $MGT
+}
+
+tstng() {
+	cd $TSTNG
+}
+
+mjmdj() {
+	cd $MJMDJ
+}
+
+danes() {
+	cd $DANES
+}
+
+mjbn() {
+	cd $MJBN
+}
+
+mtsys() {
+	cd $MTSYS
+}
+
+mrcs() {
+	cd $MRCS
+}
+
+sznm() {
+	cd $SZNM
+}
+
+mscrp() {
+	cd $MSCRP
+}
+
+mjdt() {
+	cd $MJDT
+}
+
+knowledgedb() {
+	cd $KNOWLEDGEDB
+}
+
+mgmjbn() {
+	cd $MGMJBN
+}
+
+mgmrcs() {
+	cd $MGMRCS
+}
+
+mgmtsys() {
+	cd $MGMTSYS
+}
+
+mgsznm() {
+	cd $MGSZNM
+}
+
+mgprns() {
+	cd $MGPRNS
+}
+
+mgdtfjls() {
+	cd $MGDTFJLS
+}
+
+ctst() {
+	cd $CTST
+}
+
+jtst() {
+	cd $JTST
+}
+
+gtst() {
+	cd $GTST
+}
+
+ptst() {
+	cd $PTST
+}
+
+rtst() {
+	cd $RTST
+}
+
+ntst() {
+	cd $NTST
+}
+
+ztst() {
+	cd $ZTST
+}
+
+svm() {
+	cd $SVM
+}
+
+mvs() {
+	cd $MVS
+}
+
