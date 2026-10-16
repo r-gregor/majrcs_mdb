@@ -309,14 +309,14 @@ prompt-switch-dmn() {
 }
 
 prompt-switch-rofi() {
-			prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
-			quit=$(echo "quit")
-			choice=$(echo -e "${prompts}\n${quit}" | rofi -dmenu -no-fixed-num-lines)
-			if [ "$choice" == "quit" ]; then
-				:
-			else
-				source ~/majstaf/majrcs/${choice}
-			fi
+	prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
+	quit=$(echo "quit")
+	choice=$(echo -e "${prompts}\n${quit}" | rofi -dmenu -no-fixed-num-lines)
+	if [ "$choice" == "quit" ]; then
+		:
+	else
+		source ~/majstaf/majrcs/${choice}
+	fi
 }
 
 prs() {
@@ -408,6 +408,7 @@ vimb() {
 	fi
 }
 
+# quick jump (cd) to directory
 mjstf() {
 	cd $MJSTF
 }
