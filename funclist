@@ -1,86 +1,70 @@
-### Functions ###
+# fname: funclist
+# descpt: functions to be loaded at shell start
+# 20261016 v1
+# last: 20261016
+# ---
 
-# fukcija, pajpne ukaz na "less -I"
-
+# pipe cmd output to "less -I"
 so() {
 eval "$@" | less -I~
 }
 
-# --------------------------------------------------------
-
+# ???
 cv() {
-cdargs "$1" && cd "$(cat "$HOME/.cdargsresult")" ;
-
+	cdargs "$1" && cd "$(cat "$HOME/.cdargsresult")" ;
 }
 
-# --------------------------------------------------------
-
-# funkcija, ki pred ukazom sprazni (clear) ekran
-
+# clear before fun
 kl() {
-clear && eval "$@"
+	clear && eval "$@"
 }
 
-# --------------------------------------------------------
 
 # history list
-
-export HISTCONTROL=erasedups
-
 hf() {
-clear
-if [ $# != 1 ]; then
-    echo 'Number of argumets to function "hf" must be exactly 1 [one]!'
-else
-    history | grep "$1"
-fi
+	export HISTCONTROL=erasedups
+	clear
+	if [ $# != 1 ]; then
+		printf "number of argumets to function '%s' must be exactly 1 (one)" "hf"
+	else
+		history | grep "$1"
+	fi
 }
-
-# himp () {
-#     history > ~/bin/hlist.txt
-# }
-
-# --------------------------------------------------------
 
 
 mmm() {
-clear
-source $HOME/.bashrc-monochrome
-echo "*************************"
-echo "* Use the source Luke!! *"
-echo "*************************"
-echo "The \"$HOME/.bashrc-monochrome\" has just been sourced!!"
-echo
+	clear
+	source $HOME/.bashrc-monochrome
+	printf "*************************\n"
+	printf "* Use the source Luke!! *\n"
+	printf "*************************\n"
+	printf "The '%s' has just been sourced\n\n" "$HOME/.bashrc-monochrome"
 }
 
 
+# ???
 aln() {
-clear
-eval "$@"
-echo -e "\n"
+	clear
+	eval "$@"
+	printf "\n"
 }
 
 
 crtice() {
-	printf "%$(tput cols)s\n" | tr " "  "-"
+	printf "%$(tput cols)s\n" | tr " "	"-"
 }
 
 
-# function that displays varius date & time formated info
+# displays varius date & time formated info
 zdaj() {
-	# clear the sreen
 	clear
 	zdSI=$(date +%A,\ %d.\ %B\ %Y,\ %H:%M:%S)
-	echo -n "${zdSI}"
-	echo -e "\n"
-
+	printf "${zdSI}\n"
 }
-
-# --------------------------------------------------------
 
 dejt() {
 	dejt=$(date +%Y%m%d%H%M)
-	echo $dejt
+	printf "${dejt}\n"
 }
 
 db0() {
@@ -98,186 +82,130 @@ dbs1() {
 
 
 dbs2() {
-  clear
-  while true; do
-    echo -en "$(dropbox status) \r"
-    sleep 1
+	clear
+	while true; do
+		printf "$(dropbox status) \r"
+		sleep 1
   done
 }
-# --------------------------------------------------------
 
 
-### added 20160526
-### function skrn that starts new terminal (xfce4-terminal) window with screen
-### session divided into multiple windows ...
+# starts new terminal (xfce4-terminal) window with screen
+# session divided into multiple windows ...
 skrn() {
+	gr_FJL="~/.screen-lyt"
+	if [ $1 -eq 0 ] || [ $1 -eq 1 ] || [ $1 -eq 2 ] || [ $1 -eq 3 ]; then
+		gr_PRM=$1
+		xfce4-terminal -e "screen -c ${gr_FJL}-0${gr_PRM}" & 2>/dev/null
 
-gr_FJL="~/.screen-lyt"
-if [ $1 -eq 0 ] || [ $1 -eq 1 ] || [ $1 -eq 2 ] || [ $1 -eq 3 ]; then
-	gr_PRM=$1
-	xfce4-terminal -e "screen -c ${gr_FJL}-0${gr_PRM}" & 2>/dev/null
+	elif [ $1 == "db" ]; then
+		xfce4-terminal -e "screen -c ${gr_FJL}-db" & 2>/dev/null
 
-elif [ $1 == "db" ]; then
-	xfce4-terminal -e "screen -c ${gr_FJL}-db" & 2>/dev/null
-
-else
-	gr_PRM="0"
-	xfce4-terminal -e "screen -c ${gr_FJL}-0${gr_PRM}" & 2>/dev/null
-fi
-
-}
-
-### --------------------------------------------------------------------
-
-### added 20161111
-### after installed sshfs ...
-
-
-# function pim-on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Movies
-pim-on() {
-	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/Movies /home/rgregor/KRZ_Movies
-	if [ $? -eq 0 ]; then
-		echo "KODI sucessfully conected to /home/rgregor/KRZ_Movies"
 	else
-		echo "Something went wrong ..."
+		gr_PRM="0"
+		xfce4-terminal -e "screen -c ${gr_FJL}-0${gr_PRM}" & 2>/dev/null
 	fi
 }
 
+# # function pim-on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Movies
+# pim-on() {
+# 	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/Movies /home/rgregor/KRZ_Movies
+# 	if [ $? -eq 0 ]; then
+# 		echo "KODI sucessfully conected to /home/rgregor/KRZ_Movies"
+# 	else
+# 		echo "Something went wrong ..."
+# 	fi
+# }
+# 
+# 
+# # function pim-of() -- kill sshfs /home/rgregor/KRZ_Movies
+# pim-of() {
+# 	fusermount -u /home/rgregor/KRZ_Movies
+# 	echo "/home/rgregor/KRZ_Movies disconected."
+# }
 
-# function pim-of() -- kill sshfs /home/rgregor/KRZ_Movies
-pim-of() {
-	fusermount -u /home/rgregor/KRZ_Movies
-	echo "/home/rgregor/KRZ_Movies disconected."
-}
-
-### added 20170514
-### pim -> Movies, pit -> TV Shows, piv -> Videos
-#
-#
-
-# function pit-on() -- sshfs KODI:TV Shows to /home/rgregor/KRZ_TV_shows
-pit-on() {
-	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/TV\ Shows /home/rgregor/KRZ_TV_shows
-	if [ $? -eq 0 ]; then
-		echo "KODI sucessfully conected to /home/rgregor/KRZ_TV_shows"
-	else
-		echo "Something went wrong ..."
-	fi
-}
-
-
-# function pit-of() -- kill sshfs /home/rgregor/KRZ_TV_shows
-pit-of() {
-	fusermount -u /home/rgregor/KRZ_TV_shows
-	echo "/home/rgregor/KRZ_TV_shows disconected."
-}
-
-
-################################################################################
-# function piv-on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Videos
-piv-on() {
-	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/Videos /home/rgregor/KRZ_Videos
-	if [ $? -eq 0 ]; then
-		echo "KODI sucessfully conected to /home/rgregor/KRZ_Videos"
-	else
-		echo "Something went wrong ..."
-	fi
-}
+# # function pit-on() -- sshfs KODI:TV Shows to /home/rgregor/KRZ_TV_shows
+# pit-on() {
+# 	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/TV\ Shows /home/rgregor/KRZ_TV_shows
+# 	if [ $? -eq 0 ]; then
+# 		echo "KODI sucessfully conected to /home/rgregor/KRZ_TV_shows"
+# 	else
+# 		echo "Something went wrong ..."
+# 	fi
+# }
+# 
+# 
+# # function pit-of() -- kill sshfs /home/rgregor/KRZ_TV_shows
+# pit-of() {
+# 	fusermount -u /home/rgregor/KRZ_TV_shows
+# 	echo "/home/rgregor/KRZ_TV_shows disconected."
+# }
 
 
-# function piv-of() -- kill sshfs /home/rgregor/KRZ_Videos
-piv-of() {
-	fusermount -u /home/rgregor/KRZ_Videos
-	echo "/home/rgregor/KRZ_Videos disconected."
-}
-################################################################################
+# # function piv-on() -- sshfs KODI:Videos to /home/rgregor/KRZ_Videos
+# piv-on() {
+# 	sshfs -o idmap=user root@192.168.64.32:/var/media/MEDION_sA/Videos /home/rgregor/KRZ_Videos
+# 	if [ $? -eq 0 ]; then
+# 		echo "KODI sucessfully conected to /home/rgregor/KRZ_Videos"
+# 	else
+# 		echo "Something went wrong ..."
+# 	fi
+# }
+# 
+# 
+# # function piv-of() -- kill sshfs /home/rgregor/KRZ_Videos
+# piv-of() {
+# 	fusermount -u /home/rgregor/KRZ_Videos
+# 	echo "/home/rgregor/KRZ_Videos disconected."
+# }
 
-### --------------------------------------------------------------------
-### 20170119
-#
 cnks() {
-conky &
-# exit 0
-clear
+	conky &
+	clear
 }
 
 cnkk() {
-sudo pkill conky
+	sudo pkill conky
 }
 
-cml() {
-	clear
-	cat $HOME/majstaf/forallusers/commands-list.txt
-}
-
-
-### --------------------------------------------------------------------
-### 20171101
+# ???
 wtmpp () {
-    watch -d -n1 "du $TMPP"
+	watch -d -n1 "du $TMPP"
 }
 
 
-### --------------------------------------------------------------------
-### 20180302
 256-colors () {
-
-    for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done
+	for i in {0..255}; do printf "\x1b[38;5;${i}mcolor%-5i\x1b[0m" $i ; if ! (( ($i + 1 ) % 8 )); then echo ; fi ; done
 }
 
-# 20210209 display KEYBOARD SHORTCUTS
-#
+# ???
 keybskts () {
 	clear
 	cat /home/rgregor/majstaf/metsys/KEYBOARD-SHORCUTS_20210209.TXT
 }
 
-# 20221213
 cless() {
 	if [ $# != 1 ]; then
 		return
 	fi
-
 	highlight -O  ansi $@ | less
 }
 
+# ???
 BrthReminder-c() {
 	/home/rgregor/majstaf/majbin/BrthReminder-c/BrthReminder-c "$@"
 }
 
+# ???
 BrthReminder-c-color() {
 	/home/rgregor/majstaf/majbin/BrthReminder-c/BrthReminder-c-color "$@"
-}
-
-# 20230404
-
-git-dkdb() {
-	KDBWORKTREE="${HOME}/OLDHDD/Dropbox/ODPRTO"
-	KDBGITDIR="${HOME}/majstaf/d_kdb/knowledgedb.git"
-
-	/usr/bin/git --git-dir=${KDBGITDIR} --work-tree=${KDBWORKTREE} "$@"
-}
-
-git-dmts() {
-	DMTSGITDIR="${HOME}/majstaf/d_metsys_git/d_metsys"
-	DMTSWORKDIR="${HOME}/majstaf/d_metsys_git/src_d_metsys"
-
-	/usr/bin/git --git-dir=${DMTSGITDIR} --work-tree=${DMTSWORKDIR} "$@"
-}
-
-git-dvol() {
-	DVOLGITDIR="${HOME}/majstaf/d_vol"
-	DVOLWORKDIR="${HOME}/majstaf/majvolpejpers"
-
-	/usr/bin/git --git-dir=${DVOLGITDIR} --work-tree=${DVOLWORKDIR} "$@"
 }
 
 logout() {
 		sudo loginctl terminate-user ${USER}
 }
 
-# 20241015
- function sbrn() {
+sbrn() {
 	nohup alacritty -e bash --init-file ~/.bashrc-nerd >/dev/null 2>&1 &
 }
 
@@ -285,27 +213,26 @@ sbrb() {
 	nohup alacritty -e bash --init-file ~/.bashrc-base >/dev/null 2>&1 &
 }
 
-
 prompt-switch() {
-			prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
-			quit=$(echo "quit")
-			choice=$(echo -e "${prompts}\n${quit}" | fzf --reverse -e)
-			if [ "$choice" == "quit" ]; then
-				:
-			else
-				source ~/majstaf/majrcs/${choice}
-			fi
+	prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
+	quit=$(echo "quit")
+	choice=$(echo -e "${prompts}\n${quit}" | fzf --reverse -e)
+	if [ "$choice" == "quit" ]; then
+		:
+	else
+		source ~/majstaf/majrcs/${choice}
+	fi
 }
 
 prompt-switch-dmn() {
-			prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
-			quit=$(echo "quit")
-			choice=$(echo -e "${prompts}\n${quit}" | dmenu -l 5 -p "choose prompt:")
-			if [ "$choice" == "quit" ]; then
-				:
-			else
-				source ~/majstaf/majrcs/${choice}
-			fi
+	prompts=$(for FFF in ~/majstaf/majrcs/bashrc-prompt-*; do echo $(basename $FFF); done;)
+	quit=$(echo "quit")
+	choice=$(echo -e "${prompts}\n${quit}" | dmenu -l 5 -p "choose prompt:")
+	if [ "$choice" == "quit" ]; then
+		:
+	else
+		source ~/majstaf/majrcs/${choice}
+	fi
 }
 
 prompt-switch-rofi() {
@@ -347,20 +274,15 @@ prsn() {
 	source ~/majstaf/majrcs/bashrc-prompt-nerd-muadib
 }
 
-# TESTw
 nifs() {
-	echo -n "setting IFS to newline ..."
 	IFS=$'\n'
-	echo " done."
 }
 
 oifs() {
-	echo -n "setting IFS to original value ..."
 	IFS=$' \t\n'
-	echo " done."
 }
 
-# updated 20260105
+# ???
 ncd() {
 	if [ $# -eq 1 ]; then
 		DEST="$1"
@@ -371,22 +293,6 @@ ncd() {
 	cd $(find "${DEST}" -type d \( -not -name ".git" -o -not -name ".cache" \) | fzf -e)
 }
 
-# 20250517 -- moved to separate script
-# check-all-git-diffs() {
-# 	for DDD in majbin majrcs metsys; do check-git-diffs-mdb $DDD; done
-# }
-
-### # 20260208
-### reload_picom() {
-### 	if [ "$(pgrep picom)" == "" ]; then
-### 		printf "[INFO] picom not running -- reloading ...\n"
-### 		picom --experimental-backend --config ~/.config/picom/picom.conf -b
-### 	else
-### 		printf "[INFO] picom already running\n"
-### 	fi
-### }
-
-# 20260304
 # vim filename, but create filename-backup first
 vimb() {
 	if [ $# -ne 1 ]; then
