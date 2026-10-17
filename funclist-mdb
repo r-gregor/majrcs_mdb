@@ -101,8 +101,8 @@ upup() {
 }
 
 sbr() {
-# descpt: clear and source '.bashrc'
-	clear && source ~/.bashrc
+# descpt: clear and source dot_vimrc file
+	clear && source ~/.vimrc
 }
 
 zdaj() {
