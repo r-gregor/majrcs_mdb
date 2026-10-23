@@ -102,7 +102,7 @@ upup() {
 
 sbr() {
 # descpt: clear and source dot_vimrc file
-	clear && source ~/.vimrc
+	clear && source ~/.bashrc
 }
 
 zdaj() {
@@ -203,7 +203,7 @@ BrthReminder_c_color() {
 	/home/rgregor/majstaf/majbin/BrthReminder-c/BrthReminder-c-color "$@"
 }
 
-logout() {
+logout_user() {
 # descpt: logout (user)
 		sudo loginctl terminate-user ${USER}
 }
