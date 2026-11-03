@@ -199,8 +199,8 @@ BrthReminder_c() {
 
 # ???
 BrthReminder_c_color() {
-# descpt: run BrthReminder-c-color
-	/home/rgregor/majstaf/majbin/BrthReminder-c/BrthReminder-c-color "$@"
+# descpt: run BrthReminder-c-colors
+	/home/rgregor/majstaf/majbin/BrthReminder-c/BrthReminder-c-colors "$@"
 }
 
 logout_user() {
