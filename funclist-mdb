@@ -468,3 +468,17 @@ mvs() {
 	cd $MVS
 }
 
+
+gtrmsv() {
+# descpt: show remotes in current git repository
+	git remote -v
+}
+
+
+yrm() {
+	# descpt: yes | remove ... for any directory containing .git
+	printf "[!] about to remove: '%s'\n" "$@"
+	read -r -p "[?] continue?"
+	yes | rm -rv "$@"
+}
+
