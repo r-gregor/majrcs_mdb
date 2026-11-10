@@ -163,7 +163,8 @@ export MDBVOLGITDIR="${HOME}/majstaf/mdbgit/vlpprs_mdb"
 export MDBVOLWORKDIR="${HOME}/majstaf/majvolpejpers"
 alias mvol="/usr/bin/git --git-dir=${MDBVOLGITDIR} --work-tree=${MDBVOLWORKDIR}"
 alias gst='/usr/bin/git status'
-alias gtpl='git pull'
+alias gtpl='/usr/bin/git pull'
+alias gtn='/usr/bin/git --no-pager'
 
 ###################
 ### fzf aliases ###
