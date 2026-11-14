@@ -172,6 +172,8 @@ alias gtn='/usr/bin/git --no-pager'
 alias lss-fzf='less $(fzf --reverse)'
 alias run='find ~/majstaf/majbin/ -type f -executable | fzf --reverse | bash - '
 alias run-efzf='find ~/majstaf/majbin/ -type f -executable | fzf --reverse -e | bash - '
+alias fzf='fzf --reverse --border --height=50%'
+alias FZF='/usr/bin/fzf --reverse --border'
 # moved to scripts in majbin 202560319
 # alias vedit-sfjl-fzf='fzf --reverse | xargs -ro vim'
 # alias vedit-sfjl-efzf='fzf --reverse -e | xargs -ro vim'
